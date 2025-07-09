@@ -69,17 +69,22 @@ public class App {
             System.out.println("띠링!! " + "값을 구했어요~!~! " + "[ " + num1 + " " + operator + " " + num2 + " = " + result + " ]" );
             calculator.add(result);
 
+
             while (true) {
-                System.out.print("계속하시려면 continue, 그만하시려면 exit를 입력해주세요: ");
+                calculator.printHistory();
+                System.out.print("계속하시려면 continue, 오래된 결과 값을 삭제하시려면 remove, 그만하시려면 exit를 입력해주세요: ");
                 String choice = scanner.nextLine();
 
+                // 다시 처음으로
                 if (choice.equals("continue")) {
                     break;
                 } else if (choice.equals("exit")) {
                     System.out.println("프로그램을 종료합니다.");
-                    scanner.close();
+                    scanner.close(); // 스캐너를 끝낸다.
                     return;
-                } else {
+                } else if (choice.equals("remove")) {
+                    calculator.remove(result);
+                } else { // Null, 다른 내용을 입력했을 경우
                     System.out.println("잘못입력하셨습니다.");
                 }
             }

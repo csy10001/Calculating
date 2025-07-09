@@ -5,21 +5,30 @@ import java.util.Collection;
 import java.util.List;
 
 public class Calculator {
-    private List<Double> arrresult = new ArrayList<>();
+    private List<Double> results = new ArrayList<>();
 
     public void add(double result) {
-        arrresult.add(result);
+        results.add(result);
     }
 
-    public List<Double> getArrresult(){
-        return this.arrresult;
+    public List<Double> getresults(){
+        return this.results;
     }
-    public void setArrresult(List<Double> arrresult) {
-        this.arrresult = arrresult;
+    public void setresults(List<Double> results) {
+        this.results = results;
+    }
+
+    public void printHistory() {
+        System.out.println("계산 기록:");
+        System.out.println(results);
     }
 
     public void remove(double result) {
-        arrresult.remove(result);
+        if (!results.isEmpty()) {
+            results.remove(0);
+        }
+        else {
+            System.out.println("삭제 가능한 값이 없습니다.");
+        }
     }
-
 }
