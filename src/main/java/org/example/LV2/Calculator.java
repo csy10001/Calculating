@@ -11,10 +11,10 @@ public class Calculator {
         results.add(result);
     }
 
-    public List<Double> getresults(){
+    public List<Double> getResults(){
         return this.results;
     }
-    public void setresults(List<Double> results) {
+    public void setResults(List<Double> results) {
         this.results = results;
     }
 

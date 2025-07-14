@@ -14,10 +14,10 @@ public class App {
             while (true) {
                 System.out.print("첫 번째 숫자를 입력하세요: ");
                 try {
-                    num1 = Double.parseDouble(scanner.nextLine()); // 만약 한글,영어를 넣어버리면 오류가 떠서 예외처리
+                    num1 = Double.parseDouble(scanner.nextLine());
                     break;
                 } catch (NumberFormatException e) {
-                    System.out.println("숫자만 입력해주세요!");
+                    System.out.println("숫자만 입력해주세요!");       // 만약 한글,영어를 넣어버리면 오류가 떠서 예외처리
                 }
             }
 
@@ -25,10 +25,10 @@ public class App {
             while (true) {
                 System.out.print("두 번째 숫자를 입력하세요: ");
                 try {
-                    num2 = Double.parseDouble(scanner.nextLine());  // 만약 한글,영어를 넣어버리면 오류가 떠서 예외처리
+                    num2 = Double.parseDouble(scanner.nextLine());
                     break;
                 } catch (NumberFormatException e) {
-                    System.out.println("숫자만 입력해주세요!");
+                    System.out.println("숫자만 입력해주세요!");       // 만약 한글,영어를 넣어버리면 오류가 떠서 예외처리
                 }
             }
 
@@ -85,7 +85,7 @@ public class App {
                 } else if (choice.equals("remove")) {
                     calculator.remove(result);
                 } else { // Null, 다른 내용을 입력했을 경우
-                    System.out.println("잘못입력하셨습니다.");
+                    System.out.println("잘못 입력하셨습니다.");
                 }
             }
         }
